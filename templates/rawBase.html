@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html dir="ltr" lang="en-US" class="ie6"> <![endif]-->
+<!--[if IE 7]>    <html dir="ltr" lang="en-US" class="ie7"> <![endif]-->
+<!--[if IE 8]>    <html dir="ltr" lang="en-US" class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html dir="ltr" lang="en-US"> <!--<![endif]-->
+
+<!-- BEGIN head -->
+<head>
+
+	<!--Meta Tags-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{% block titleBlock %}{% endblock %}</title>
+	<!-- Title -->
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" type="text/css"  media="all" />
+	
+		
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/colours/goldblack.css" type="text/css"  media="all"  />
+		
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/flexslider.css" type="text/css"  media="all" />
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/superfish.css" type="text/css"  media="all" />
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/prettyPhoto.css" type="text/css"  media="all" />
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/responsive.css" type="text/css"  media="all" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	
+	<!-- JavaScript (must go in header) -->
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	
+	<!-- JavaScript For IE -->
+		
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="js/selectivizr-min.js"></script>
+	<![endif]-->
+
+<!-- END head -->
+</head>
+
+<!-- BEGIN body -->
+<body class="loading">
+	
+
+	
+	<!-- BEGIN #background-wrapper -->
+	<div id="background-wrapper">
+	
+	<!-- BEGIN #wrapper -->
+	<div id="wrapper">
+		
+		<!-- BEGIN #header-gmap -->
+		<div id="header-gmap">
+			
+			<div id="map-canvas"></div>
+			
+		<!-- END #header-gmap -->
+		</div>
+		
+		<!-- BEGIN #topbar -->
+		<div id="topbar">
+			
+			<!-- #topbar-wrapper -->
+			<div id="topbar-wrapper" class="clearfix">
+				
+				<!-- BEGIN .topbar-right -->
+				<div class="topbar-right clearfix">
+					
+					<a href="booking1.html" class="button0">Login/SignUp</a>
+					
+					<ul class="header-contact">
+						<li class="phone_icon">{{ phoneNo }} </li>
+						<li class="email_icon">{{ emailId }}</li>
+					</ul>
+					
+				<!-- END .topbar-right -->
+				</div>
+			
+			<!-- END #topbar-right -->
+			</div>
+			
+		<!-- END #topbar -->
+		</div>
+		
+		<div role="banner">
+		
+			<!-- BEGIN .content-wrapper -->
+			<div class="content-wrapper clearfix">
+			
+				<!-- BEGIN #logo -->
+				<div id="logo">	
+					<h1><a href="index.html">spot my arena</a><span>Booking Sports</span></h1>
+				<!-- END #logo -->
+				</div>
+				
+				<!-- .main-navigation -->
+				<nav class="main-navigation">
+
+					<ul id="navigation">
+						<li class="current-menu-item current_page_item"><a href="{{ homePageHtml }}"><strong>Home<span>	</span></strong></a>
+						</li>
+						<li><a href="{{ sportsPageHtml }}"><strong>Sports<span>Available sports</span></strong></a></li>
+						<li><a href="{{ bookCancelPageHtml }}"><strong>Booking/Cancellation<span>Print Ticket</span></strong></a>
+                                                        <ul class="sub-menu">
+                                                                <li><a href="{{ bookingStatusPageHtml }}">Booking Status</a>
+                                                                <li><a href="{{ cancelPageHtml }}">Cancel Your Booking</a>
+                                                        </ul>
+						</li>
+						<li><a href="{{ eventsPageHtml  }}"><strong>Events<span>upcoming events</span></strong></a></li>
+						<li><a href="{{ corporatePageHtml }}"><strong>Corporates Plans</strong></a></li>
+					</ul>
+				
+				<!-- .main-navigation -->
+				</nav>
+				
+				<!-- BEGIN .mobile-menu-wrapper -->
+				<div class="mobile-menu-wrapper clearfix">
+					<div class="mobile-menu-button"></div>
+					<div class="mobile-menu-title">Navigation</div>
+					
+					<!-- mobile-menu-inner -->
+					<div class="mobile-menu-inner">
+						<ul id="mobile-menu">
+							<li class="current-menu-item current_page_item"><a href="{{ homePageHtml }}">Home</a>
+							</li>
+						<li><a href="{{ sportsPageHtml }}">Available sports</a></li>
+						<li><a href="{{ bookCancelPageHtml }}">Booking Receipt</strong></a>
+							<ul class="sub-menu">
+                                                                <li><a href="{{ bookingStatusPageHtml }}">Booking Status</a>
+                                                                <li><a href="{{ cancelPageHtml }}">Cancel Your Booking</a>
+							</ul>
+						</li>
+						<li><a href="{{ eventsPageHtml }}">upcoming events</strong></a></li>
+                                                <li><a href="{{ corporatePageHtml }}"><strong>Corporates Plans</strong></a></li>
+						<!-- END #main-menu -->
+						</ul>
+					<!-- mobile-menu-inner -->
+					</div>
+
+				<!-- END .mobile-menu-wrapper -->
+				</div>
+
+			<!-- END .content-wrapper -->
+			</div>
+		
+		</div>
+	{% block contentBlock %}Nothing{% endblock %}
+		
+		<!-- BEGIN #footer -->
+		<div id="footer">
+			
+			<!-- BEGIN .content-wrapper -->
+			<div class="content-wrapper clearfix">
+				
+				<!-- BEGIN .one-fourth -->
+				<div class="one-fourth">
+					<h4 class="title-style2">Flickr Stream<span class="title-block"></span></h4>
+					<div class="flickr_badge_wrapper clearfix">
+						<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;flickr_display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=65744139@N04"></script>
+					</div>
+				<!-- END .one-fourth -->
+				</div>
+				
+				<!-- BEGIN .one-fourth -->
+				<div class="one-fourth">
+					<h4 class="title-style2">Latest Tweets<span class="title-block"></span></h4>
+					<ul class="twitter-feed">
+						<li><a href="#">@spotmyarena</a> spot my arena launched<span>about 6 hours ago</span></li>
+						<li><a href="#">@spotmyarena</a>How to book a sport online<span>about 4 hours ago</span></li>
+					</ul>
+				<!-- END .one-fourth -->
+				</div>
+				
+				<!-- BEGIN .one-fourth -->
+				<div class="one-fourth">
+					<h4 class="title-style2">Newsletter<span class="title-block"></span></h4>
+					<p>Subscribe to our newsletter to get latest updates</p>
+					<form action="#" method="post">
+						<input class="nsu-field" type="text" name="newsletter_email" value="" />
+						<input type="submit" class="button1" name="submit" value="Subscribe" />
+					</form>
+				<!-- END .one-fourth -->
+				</div>
+				
+				<!-- BEGIN .one-fourth -->
+				<div class="one-fourth last-col">
+					<h4 class="title-style2">Social Media<span class="title-block"></span></h4>	
+					<ul class="social-icons clearfix">
+						<li><a target="_blank" href="#"><span class="facebook-icon"></span></a></li>
+						<li><a target="_blank" href="#"><span class="twitter-icon"></span></a></li>
+						<li><a target="_blank" href="#"><span class="gplus-icon"></span></a></li>
+						<li><a target="_blank" href="#"><span class="linkedin-icon"></span></a></li>
+					</ul>
+				<!-- END .one-fourth -->
+				</div>		
+				<div class="clearboth"></div>
+				
+				<!-- BEGIN #footer-bottom -->
+				<div id="footer-bottom" class="clearfix">
+					
+					<p class="fl">&copy; spot my arena. All Rights Reserved</p>
+					
+					<nav class="secondary-navigation">
+						<ul class="fr">
+							<li><a href="{{ aboutPageHtml }}">ABOUT US</a><span>/</span></li>
+							<li><a href="{{ blogPageHtml }}">BLOG</a><span>/</span></li>
+							<li><a href="{{ pressPageHtml }}">PRESS</a><span>/</span></li>
+							<li><a href="{{ feedbackPageHtml }}">FEEDBACK</a><span>/</span></li>
+							<li><a href="{{ privacyPageHtml }}">PRIVACY</a><span>/</span></li>
+							<li><a href="{{ contactPageHtml }}">CONTACT</a><span>/</span></li>
+						</ul>
+					</nav>
+					
+				<!-- END #footer-bottom -->
+				</div>
+				<HR>
+				<img src="{{ STATIC_URL }}/images/card_logos.png" />
+				
+			<!-- END .content-wrapper -->
+			</div>
+		
+		<!-- END #footer -->
+		</div>
+		
+	<!-- END #wrapper -->
+	</div>
+	
+	<!-- END #background-wrapper -->
+	</div>
+	
+	<!-- JavaScript -->
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.9.1.js"></script>
+	<script type='text/javascript' src='{{ STATIC_URL }}js/jquery-ui.js'></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/superfish.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/gmap.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/scripts.js"></script>
+	
+<!-- END body -->
+</body>
+</html
