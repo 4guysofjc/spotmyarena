@@ -8,4 +8,7 @@ def indexView(request):
     return render(request, "index.html", {'phoneNo' : '9876543210'})
     return HttpResponse(html)
 
+def searchResultsView(request):
+    return render(request, "searchResults.html", {'phoneNo' : '9876543210'})
+    return HttpResponse(html)
 

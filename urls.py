@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
      url(r'^index/$', views.indexView),
+     url(r'^search/$', views.searchResultsView),
     url(r'^admin/', include(admin.site.urls)),
 )
 
