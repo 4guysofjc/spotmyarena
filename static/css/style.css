@@ -2966,39 +2966,64 @@ a.button2,
 	text-decoration: underline;
 }
 
-#style_picker .picker_title {
-	margin: 0 0 5px 0 !important;
+.advertisement {
+        width: 900px;
+        padding: 2px;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        position: relative;
+        height: 70px;
 }
 
-.style_picker_toggle_wrapper {
-	background: #fff;
-	display: block;
-	position: absolute;
-	top: 0px;
-	right: -45px;
-	width: 45px;
-	height: 45px;
+.search_heading {
+        width: 900px;
+        padding: 10px;
+        margin: 0 auto;
+        top: 5px;
+        left: 0px;
+        position: relative;
+        height: 50px;
+}
+.search_results_area {
+        width: 700px;
+        padding: 0px;
+        margin: 0 auto;
+	top: 10px;
+        left: -100px;
+        border-bottom: 1px dotted;
+        position: relative;
+        min-height: 500px;
+}
+.search_results_container {
+        width: 700px;
+        padding-top: 12px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        bottom: 0px;
+        left: 0px;
+        border-bottom: 1px dotted;
+        position: relative;
+        height: 100px;
+}
+.search_filter_container {
+        width: 900px;
+        margin: 0 auto;
+        bottom: 0px;
+        left: 0;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
+        position: relative;
+        min-height: 100px;
+}
+.page_navigation_bar {
+        width: 700px;
+        margin: 0 auto;
+        bottom: 0px;
+        left: -500;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
+        position: relative;
+        height: 30px;
 }
 
-.style_picker_toggle {
-	background: url(../images/style.png) #fff no-repeat top left;
-	width: 27px;
-	height: 27px;
-	position: absolute;
-	top: 9px;
-	right: 9px;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-
-.style_picker_toggle_open {
-	background: url(../images/style.png) #fff bottom left;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
