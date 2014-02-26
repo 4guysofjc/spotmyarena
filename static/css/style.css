@@ -2965,7 +2965,7 @@ a.button2,
 #style_picker a:hover {
 	text-decoration: underline;
 }
-
+/* Search result page */
 .advertisement {
         width: 900px;
         padding: 2px;
@@ -3027,3 +3027,45 @@ a.button2,
         height: 30px;
 }
 
+.searched_data_left {
+        width: 450px;
+        margin: 0 auto;
+        float: left;
+        bottom: 0px;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
+        position: relative;
+        height: 100px;
+}
+.searched_data_right {
+        width: 250px;
+        margin: 0 auto;
+        float: right;
+        bottom: 0px;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
+        position: relative;
+        height: 100px;
+}
+
+.left {
+	float:left;
+}
+.right {
+	float: right;
+}
+.bold {
+	font-weight: bold;
+}
+.f18 {
+	font-size: 18px;
+	font-color: rgb(28, 28, 28);
+}
+.remove_underline {
+	text-decoration: none;
+}
+a.remove_underline:hover {
+	background: transparent;
+        color: #AF5600;
+	text-decoration: underline;
+}
