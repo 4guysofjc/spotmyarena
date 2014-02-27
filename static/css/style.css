@@ -2968,26 +2968,32 @@ a.button2,
 /* Search result page */
 .advertisement {
         width: 900px;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        position: relative;
+        height: 100px;
+	max-height: 100px;
+       border-top: 1px dotted;
+       border-bottom: 1px dotted;
+
+}
+
+.search_heading {
+        width: 900px;
         padding: 2px;
         margin: 0 auto;
         top: 0px;
         left: 0px;
         position: relative;
-        height: 70px;
-}
-
-.search_heading {
-        width: 900px;
-        padding: 10px;
-        margin: 0 auto;
-        top: 5px;
-        left: 0px;
-        position: relative;
         height: 50px;
+	font-size: 30px;
+       border-top: 1px dotted;
+       border-bottom: 1px dotted;
 }
 .search_results_area {
         width: 700px;
-        padding: 0px;
+        padding: 10px;
         margin: 0 auto;
 	top: 10px;
         left: -100px;
@@ -3002,7 +3008,7 @@ a.button2,
         margin: 0 auto;
         bottom: 0px;
         left: 0px;
-        border-bottom: 1px dotted;
+        border-bottom: 0.5px solid;
         position: relative;
         height: 100px;
 }
@@ -3019,15 +3025,15 @@ a.button2,
 .page_navigation_bar {
         width: 700px;
         margin: 0 auto;
-        bottom: 0px;
-        left: -500;
+        top: 10px;
+        left: -100px;
         border-top: 1px dotted;
         border-bottom: 1px dotted;
         position: relative;
         height: 30px;
 }
 
-.searched_data_left {
+.search_data_left {
         width: 450px;
         margin: 0 auto;
         float: left;
@@ -3037,7 +3043,7 @@ a.button2,
         position: relative;
         height: 100px;
 }
-.searched_data_right {
+.search_data_right {
         width: 250px;
         margin: 0 auto;
         float: right;
@@ -3048,6 +3054,74 @@ a.button2,
         height: 100px;
 }
 
+.search_address {
+        width: 450px;
+        margin: 0 auto;
+        float: left;
+        bottom: 0px;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
+        position: relative;
+        height: 14px;	
+}
+
+.search_sports_available {
+        width: 450px;
+        margin: 0 auto;
+        float: left;
+        bottom: 0px;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
+        position: relative;
+        height: 16px; 
+}
+.search_sport_cost {
+        width: 450px;
+        margin: 0 auto;
+        float: left;
+        bottom: 0px;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
+        position: relative;
+        height: 16px;
+}
+.search_sport_hours {
+        width: 450px;
+        margin: 0 auto;
+        float: left;
+        bottom: 0px;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
+        position: relative;
+        height: 16px;
+}
+.search_rating {
+        width: 50px;
+        margin: 0 auto;
+        float: left;
+        bottom: 0px;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
+        position: relative;
+        height: 30px;
+	background: green;
+	font-size: 18px;
+	text-align: center;
+	line-height: 30px;
+}
+.search_no_of_votes {
+        width: 150px;
+        margin: 0 auto;
+        float: left;
+        bottom: 0px;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
+        position: relative;
+        height: 20px;
+        font-size: 12px;
+        text-align: right;
+        line-height: 20px;
+}
 .left {
 	float:left;
 }
@@ -3057,15 +3131,27 @@ a.button2,
 .bold {
 	font-weight: bold;
 }
+.f12 {
+        font-size: 12px;
+}
+.f14 {
+        font-size: 14px;
+}
+.f16 {
+        font-size: 16px;
+}
 .f18 {
 	font-size: 18px;
-	font-color: rgb(28, 28, 28);
 }
+
 .remove_underline {
 	text-decoration: none;
 }
 a.remove_underline:hover {
 	background: transparent;
-        color: #AF5600;
 	text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
 }

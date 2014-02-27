@@ -177,6 +177,12 @@ a.button0 {
 #footer-bottom ul li span {
 	color: #424242;
 }
+.sports_available,
+.search_address 
+.sport_hours 
+.sport_cost {
+	color: #424242;
+}
 
 /* Grey Hover Background */
 #language-selection li li a:hover {
