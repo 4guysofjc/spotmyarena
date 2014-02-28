@@ -2974,8 +2974,6 @@ a.button2,
         position: relative;
         height: 100px;
 	max-height: 100px;
-       border-top: 1px dotted;
-       border-bottom: 1px dotted;
 
 }
 
@@ -2988,8 +2986,6 @@ a.button2,
         position: relative;
         height: 50px;
 	font-size: 30px;
-       border-top: 1px dotted;
-       border-bottom: 1px dotted;
 }
 .search_results_area {
         width: 700px;
@@ -2997,7 +2993,6 @@ a.button2,
         margin: 0 auto;
 	top: 10px;
         left: -100px;
-        border-bottom: 1px dotted;
         position: relative;
         min-height: 500px;
 }
@@ -3038,8 +3033,6 @@ a.button2,
         margin: 0 auto;
         float: left;
         bottom: 0px;
-        border-top: 1px dotted;
-        border-bottom: 1px dotted;
         position: relative;
         height: 100px;
 }
@@ -3048,8 +3041,6 @@ a.button2,
         margin: 0 auto;
         float: right;
         bottom: 0px;
-        border-top: 1px dotted;
-        border-bottom: 1px dotted;
         position: relative;
         height: 100px;
 }
@@ -3059,8 +3050,6 @@ a.button2,
         margin: 0 auto;
         float: left;
         bottom: 0px;
-        border-top: 1px dotted;
-        border-bottom: 1px dotted;
         position: relative;
         height: 14px;	
 }
@@ -3070,8 +3059,6 @@ a.button2,
         margin: 0 auto;
         float: left;
         bottom: 0px;
-        border-top: 1px dotted;
-        border-bottom: 1px dotted;
         position: relative;
         height: 16px; 
 }
@@ -3080,8 +3067,6 @@ a.button2,
         margin: 0 auto;
         float: left;
         bottom: 0px;
-        border-top: 1px dotted;
-        border-bottom: 1px dotted;
         position: relative;
         height: 16px;
 }
@@ -3090,8 +3075,6 @@ a.button2,
         margin: 0 auto;
         float: left;
         bottom: 0px;
-        border-top: 1px dotted;
-        border-bottom: 1px dotted;
         position: relative;
         height: 16px;
 }
@@ -3100,13 +3083,12 @@ a.button2,
         margin: 0 auto;
         float: left;
         bottom: 0px;
-        border-top: 1px dotted;
-        border-bottom: 1px dotted;
         position: relative;
         height: 30px;
 	background: green;
 	font-size: 18px;
 	text-align: center;
+	color: white;
 	line-height: 30px;
 }
 .search_no_of_votes {
@@ -3114,13 +3096,21 @@ a.button2,
         margin: 0 auto;
         float: left;
         bottom: 0px;
-        border-top: 1px dotted;
-        border-bottom: 1px dotted;
         position: relative;
         height: 20px;
         font-size: 12px;
         text-align: right;
         line-height: 20px;
+}
+.search_choose_slots {
+        width: 100px;
+        margin: 0 auto;
+        bottom: 0px;
+        position: relative;
+        height: 30px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 30px !important;
 }
 .left {
 	float:left;
