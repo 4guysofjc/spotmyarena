@@ -1,6 +1,11 @@
 {% extends "rawBase.html" %}
 
 {% block titleBlock %} Spot my Arena :: Search Results {% endblock %}
+{% block scriptBlock %} 
+$( document ).ready(function() { $( ".search_choose_slots" ).click(function() {
+$( ".selecting_slot_area" ).toggle( "slow" );
+}); });
+{% endblock %}
 {% block contentBlock %}
 <div class="advertisement"> <img src="{{ STATIC_URL }}images/demo_image_01.jpg"></div>
 <div class="search_heading">Search result for badmition for 27th Feb 2014</div>
@@ -24,9 +29,11 @@
 			<div class="search_no_of_votes right">based on 22 votes</div>
 			<BR />
 			<BR />
-			<a href="#" class="search_choose_slots button0 right">Choose slots</a>
+			<div class="search_choose_slots button1 right">Choose Slots</div>
 		</div>
 	</li>
+	<div class="selecting_slot_area">
+	</div>
 </div>
 <div class="page_navigation_bar"> </div>
 {% endblock %}

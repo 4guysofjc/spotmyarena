@@ -119,15 +119,16 @@ a.button0 {
 }
 
 a.hover_gold_color {
-        color: #000000;
+        color: red;
 }
 a.hover_gold_color:hover {
         color: #bf9958;
 }
 
-a.search_choose_slots:hover {
-	border-color: #bf9958 !important;
-	border: 2px solid;
+.search_choose_slots:hover {
+}
+.search_choose_slots {
+	
 }
 
 .facebook-icon:hover,

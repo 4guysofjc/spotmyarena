@@ -3007,6 +3007,19 @@ a.button2,
         position: relative;
         height: 100px;
 }
+.selecting_slot_area {
+        width: 700px;
+        padding-top: 12px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        bottom: 0px;
+        left: 0px;
+        border-bottom: 4px solid;
+        border-right: 4px solid;
+        border-left: 1px solid;
+        position: relative;
+        height: 100px;
+}
 .search_filter_container {
         width: 900px;
         margin: 0 auto;
@@ -3107,10 +3120,10 @@ a.button2,
         margin: 0 auto;
         bottom: 0px;
         position: relative;
-        height: 30px;
+        height: 22px;
         font-size: 16px;
         text-align: center;
-        line-height: 30px !important;
+        line-height: 22px !important;
 }
 .left {
 	float:left;
