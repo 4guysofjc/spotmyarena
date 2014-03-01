@@ -2978,14 +2978,79 @@ a.button2,
 }
 
 .search_heading {
-        width: 900px;
+        width: 700px;
         padding: 2px;
         margin: 0 auto;
         top: 0px;
-        left: 0px;
+        left: -100px;
         position: relative;
         height: 50px;
 	font-size: 30px;
+}
+
+.search_filter_container {
+        width: 700px;
+        margin: 0 auto;
+        bottom: 0px;
+        left: -100px;
+        position: relative;
+        min-height: 60px;
+}
+.search_filter_top {
+        width: 704px;
+        margin: 0 auto;
+        bottom: 0px;
+        left: 0;
+        border-top: 0.5px solid;
+	border-bottom: 0.5px solid;
+	border-left: 0.5px solid;
+        position: relative;
+        height: 30px;
+}
+.search_filter_bottom {
+        width: 700px;
+        margin: 0 auto;
+        bottom: 0px;
+        left: 0;
+        border-bottom: 2px solid;
+        border-left: 2px solid;
+        border-right: 2px solid;
+        position: relative;
+        height: 50px;
+}
+.search_filter_top_tab {
+        width: 139.5px;
+        margin: 0 auto;
+        bottom: 0px;
+        left: -200; 
+	background-color: #8b8b8b;
+        border-right: 0.5px solid;
+        position: relative;
+        height: 30px;
+	float: left;
+}
+
+.search_filter_bottom_tab {
+        width: 139px;
+        margin: 0 auto;
+        bottom: 0px;
+        left: -200;
+        position: relative;
+        height: 50px;
+        float: left;
+}
+
+.search_filter_top_tab_label {
+        width: 139px;
+        height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: white;
+}
+.filter_date {
+	height: 20px; !important
+	max-width: 75px; !important
+
 }
 .search_results_area {
         width: 700px;
@@ -3019,16 +3084,6 @@ a.button2,
         border-left: 1px solid;
         position: relative;
         height: 100px;
-}
-.search_filter_container {
-        width: 900px;
-        margin: 0 auto;
-        bottom: 0px;
-        left: 0;
-        border-top: 1px dotted;
-        border-bottom: 1px dotted;
-        position: relative;
-        min-height: 100px;
 }
 .page_navigation_bar {
         width: 700px;

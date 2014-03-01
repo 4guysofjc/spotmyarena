@@ -126,9 +126,10 @@ a.hover_gold_color:hover {
 }
 
 .search_choose_slots:hover {
+	background-color: #ffffff; !important
 }
 .search_choose_slots {
-	
+	background-color: #bf9958; !important
 }
 
 .facebook-icon:hover,

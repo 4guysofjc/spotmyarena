@@ -2,9 +2,8 @@
 
 {% block titleBlock %} Spot my Arena :: Search Results {% endblock %}
 {% block scriptBlock %} 
-$( document ).ready(function() { 
-$('.selecting_slot_area').hide();
-
+$( document ).ready(function() {
+    $('.selecting_slot_area').hide();
 	$( ".search_choose_slots" ).click(function() {
 		id = $(this).attr('toggle');
 		$('.selecting_slot_area').not('#' + id).hide("slow");
@@ -16,7 +15,47 @@ $('.selecting_slot_area').hide();
 {% block contentBlock %}
 <div class="advertisement"> <img src="{{ STATIC_URL }}images/demo_image_01.jpg"></div>
 <div class="search_heading">Search result for badmition for 27th Feb 2014</div>
-<div class="search_filter_container"> </div>
+<div class="search_filter_container"> 
+	<div class="search_filter_top">
+		<div class="search_filter_top_tab">
+			<div class="search_filter_top_tab_label">
+			Filters
+			</div>
+		</div>
+                <div class="search_filter_top_tab">
+                        <div class="search_filter_top_tab_label">
+			Sport
+                        </div>
+                </div>
+                <div class="search_filter_top_tab">
+                        <div class="search_filter_top_tab_label">
+			Locality
+                        </div>
+                </div>
+                <div class="search_filter_top_tab">
+                        <div class="search_filter_top_tab_label">
+			Date
+                        </div>
+                </div>
+                <div class="search_filter_top_tab">
+                        <div class="search_filter_top_tab_label">
+                        </div>
+                </div>
+	</div>
+	<div class="search_filter_bottom">
+                <div class="search_filter_bottom_tab">
+                </div>
+                <div class="search_filter_bottom_tab">
+                </div>
+                <div class="search_filter_bottom_tab">
+                </div>
+                <div class="search_filter_bottom_tab">
+			<input type="text" id="datefrom" name="book_date_from" value="" class="datepicker filter_date">
+                </div>
+                <div class="search_filter_bottom_tab">
+                </div>
+	</div>
+</div>
 <div class="search_results_area">
 	<li class="search_results_container">
 		<div class="search_data_left">
@@ -40,6 +79,7 @@ $('.selecting_slot_area').hide();
 		</div>
 	</li>
 	<div class="selecting_slot_area" id="first">
+	
 	</div>
         <li class="search_results_container">
                 <div class="search_data_left">
