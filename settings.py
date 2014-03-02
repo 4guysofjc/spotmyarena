@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djangoratings',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,7 +77,7 @@ DATABASES = {
         'NAME': 'spotmyarena',
         'USER': 'root',
         'PASSWORD': 'a',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
