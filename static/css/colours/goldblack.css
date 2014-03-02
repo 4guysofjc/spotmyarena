@@ -132,6 +132,13 @@ a.hover_gold_color:hover {
 	background-color: #bf9958; !important
 }
 
+.next:hover,
+.prev:hover,
+.dot3:hover,
+.active:hover {
+	background: #bf9958;
+}
+
 .facebook-icon:hover,
 .twitter-icon:hover,
 .pinterest-icon:hover,
@@ -207,4 +214,12 @@ a.hover_gold_color:hover {
 #open_datepicker .ui-datepicker-calendar .ui-datepicker-unselectable .ui-state-default {
 	background: #292929;
 	color: #7b7b7b;
+}
+
+.search_top_tab,
+.next,
+.prev,
+.dot3,
+.active {
+background-color: #CCCCCC;
 }

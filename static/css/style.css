@@ -3023,7 +3023,6 @@ a.button2,
         margin: 0 auto;
         bottom: 0px;
         left: -200; 
-	background-color: #8b8b8b;
         border-right: 0.5px solid;
         position: relative;
         height: 30px;
@@ -3090,12 +3089,100 @@ a.button2,
         margin: 0 auto;
         top: 10px;
         left: -100px;
-        border-top: 1px dotted;
-        border-bottom: 1px dotted;
         position: relative;
-        height: 30px;
+        height: 29px;
+}
+.page_navigation_bar_left {
+
+        width: 200px;
+        margin: 0 auto;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+        top: 0px;
+        left: 0px;
+        position: relative;
+	float: left;
+        height: 29px;
+	font-size: 16px;
+}
+.page_navigation_bar_right {
+        width: 400px;
+        margin: 0 auto;
+        padding-left: 9px;
+        padding-right: 9px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        bottom: 0px;
+        left: 0px;
+        position: relative;
+        height: 20px;
+        float: right;
 }
 
+.current {
+        width: 20px; !important
+        height: 20px;
+        padding-left: 9px;
+        padding-right: 9px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        line-height: 20px;
+	float: right;
+	border-left: 1px dotted;
+}
+.active {
+        width: 20px; !important
+        height: 20px;
+        padding-left: 9px;
+        padding-right: 9px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        line-height: 20px;
+        float: right;
+	border-left: 1px dotted;
+}
+
+.dot3 {
+        width: 40px; !important
+        height: 20px;
+        padding-left: 9px;
+        padding-right: 9px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        line-height: 20px;
+        float: right;
+	border-left: 1px dotted;
+}
+.next {
+        width: 50px; !important
+        height: 20px;
+        padding-left: 9px;
+        padding-right: 9px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        line-height: 20px;
+        float: right;
+        border-left: 1px dotted;
+}
+
+.prev {
+        width: 50px; !important
+        height: 20px;
+        padding-left: 9px;
+        padding-right: 9px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        line-height: 20px;
+        float: right;
+        border-left: 1px dotted;
+}
 .search_data_left {
         width: 450px;
         margin: 0 auto;
@@ -3178,8 +3265,9 @@ a.button2,
         height: 22px;
         font-size: 16px;
         text-align: center;
-        line-height: 22px !important;
+        line-height: 22px !important
 }
+
 .left {
 	float:left;
 }
@@ -3210,6 +3298,6 @@ a.remove_underline:hover {
 	text-decoration: underline;
 }
 
-li {
+li.search_results_container {
     list-style-type: none;
 }
