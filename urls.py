@@ -11,6 +11,7 @@ urlpatterns = patterns('',
 
      url(r'^index/$', views.indexView),
      url(r'^search/$', views.searchResultsView),
+     url(r'^club/$', views.clubProfile),
     url(r'^admin/', include(admin.site.urls)),
 )
 

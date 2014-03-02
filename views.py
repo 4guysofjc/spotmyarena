@@ -12,3 +12,7 @@ def searchResultsView(request):
     return render(request, "searchResults.html", {'phoneNo' : '9876543210'})
     return HttpResponse(html)
 
+def clubProfile(request):
+    return render(request, "clubProfile.html", {'phoneNo' : '9876543210'})
+    return HttpResponse(html)
+

@@ -3301,3 +3301,158 @@ a.remove_underline:hover {
 li.search_results_container {
     list-style-type: none;
 }
+
+
+/* Club profile page */
+
+a.no_underline {
+	text-decoration: none;
+	color: black;
+}
+.club_header {
+        width: 900px;
+        height: 200px;
+        padding: 2px;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        position: relative;
+}
+
+.club_header_top {
+        width: 900px;
+        height: 50px;
+	padding-top: 10px;
+        margin: 0 auto;
+	border-bottom: 1px dotted;
+        top: 0px;
+        left: 0px;
+        position: relative;
+}
+
+.club_header_details {
+        width: 900px;
+        height: 60px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+        margin: 0 auto;
+        border-bottom: 1px dotted;
+        top: 0px;
+        left: 0px;
+        position: relative;
+}
+.club_phone_container {
+        width: 900px;
+        height: 30px;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        position: relative;
+}
+
+.club_phone_label {
+	font-size: 14px;
+	float: left;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+.club_phone_value {
+        font-size: 14px;
+        float: left;
+        margin-top: 10px;
+        margin-right: 20px;
+}
+.club_address_label {
+        font-size: 14px;
+        float: left;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+.club_address_value {
+        font-size: 14px;
+        float: left;
+        margin-top: 10px;
+        margin-right: 20px;
+}
+.club_address_container {
+        width: 900px;
+        height: 30px;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        position: relative;
+}
+
+.club_ratings {
+        width: 900px;
+        height: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        border-bottom: 1px dotted;
+        top: 0px;
+        left: 0px;
+        position: relative;
+}
+.club_tab_container {
+        width: 900px;
+        height: 40px;
+        margin: 0 auto;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
+        top: 0px;
+        left: 0px;
+        position: relative;
+}
+.club_name {
+	height: 30px;
+	font-size: 30px;
+	line-height: 30px;
+	margin-right: 10px;
+	float: left;
+}
+.club_area {
+	bottom: 0px;
+	height: 20px;
+	line-height: 40px;
+        float: left;
+	float: bottom;
+}
+.club_rating {
+        width: 70px;
+        margin: 0 auto;
+        bottom: 0px;
+        position: relative;
+        height: 50px;
+        background: green;
+        font-size: 24px;
+        text-align: center;
+        color: white;
+        line-height: 50px;
+}
+/*
+	Ratings Stars
+	(with as little code as possible)
+*/
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover,
+.rating > span:hover ~ span {
+  color: transparent;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   left: 0; 
+   color: #bf9958;
+}
+

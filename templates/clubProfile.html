@@ -1,0 +1,35 @@
+{% extends "rawBase.html" %}
+
+{% block titleBlock %} Spot my Arena :: {{ clubName }}, {{ cityName }} {% endblock %}
+{% block scriptBlock %} 
+{% endblock %}
+{% block contentBlock %}
+<div class="advertisement"> <img src="{{ STATIC_URL }}images/demo_image_01.jpg"></div>
+<div class="club_header">
+	<div class="club_header_top">
+		<div class="club_name"><a href="" class="no_underline"><strong>Gurukul</strong></a></div>
+		<div class="club_area"><a href="" class="no_underline"><b>MARATHAHALLI</b></a></div>
+	</div>
+	<div class="club_header_details">
+		<div class="club_phone_container">
+			<div class="club_phone_label"><b>PHONE:</b></div>
+			<div class="club_phone_value"><b>987654321, 987654321</b></div>
+		</div>
+		<div class="club_address_container">
+			<div class="club_address_label"><b>ADDRESS:</b></div>
+			<div class="club_address_value"><b>ORR, near Cessana Business Park, Marathahalli, Bangalore</b></div>
+		</div>
+	</div>
+	<div class="club_ratings">
+		<div class="club_rating right">3.6</div>	
+		<div class="rate_club left f14">
+			<b>YOUR RATING:<b>
+			<div class="rating f16">
+			<span> &#9734;</span><span> &#9734;</span><span> &#9734;</span><span> &#9734;</span><span> &#9734;</span>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="club_tab_container"></div>
+{% endblock %}
