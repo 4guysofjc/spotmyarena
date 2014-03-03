@@ -42,6 +42,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'djangoratings',
+    'dajaxice',
+    'dajax',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -60,8 +62,15 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 "django.core.context_processors.media",
 "django.core.context_processors.static",
 "django.core.context_processors.tz",
-"django.contrib.messages.context_processors.messages")
+"django.core.context_processors.request",
+"django.contrib.messages.context_processors.messages",
+)
 
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.eggs.Loader',
+)
 
 ROOT_URLCONF = 'spotmyarena.urls'
 
@@ -110,6 +119,7 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 STATICFILES_FINDERS = (
 "django.contrib.staticfiles.finders.FileSystemFinder",
- "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+"django.contrib.staticfiles.finders.AppDirectoriesFinder",
+"dajaxice.finders.DajaxiceFinder",
 )
 

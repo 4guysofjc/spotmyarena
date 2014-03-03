@@ -1,3 +1,4 @@
+{% load dajaxice_templatetags %}
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html dir="ltr" lang="en-US" class="ie6"> <![endif]-->
 <!--[if IE 7]>    <html dir="ltr" lang="en-US" class="ie7"> <![endif]-->
@@ -6,14 +7,14 @@
 
 <!-- BEGIN head -->
 <head>
-
+	{% dajaxice_js_import %}
 	<!--Meta Tags-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>{% block titleBlock %}{% endblock %}</title>
 	<!-- Title -->
-<script src="//code.jquery.com/jquery-1.9.1.js"></script>
-<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" type="text/css"  media="all" />
 	
