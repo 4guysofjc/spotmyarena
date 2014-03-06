@@ -1,11 +1,13 @@
 
-
 from django.http import HttpResponse
 from django.template import Template, Context
 from django.shortcuts import render
+from spotmyarena.forms import HomePageSearch
 
 def indexView(request):
-    return render(request, "index.html", {'phoneNo' : '9876543210'})
+    if request.method == 'GET':
+    	form = HomePageSearch()
+    return render(request, "index.html", {'phoneNo' : '9876543210', 'form' : form, })
     return HttpResponse(html)
 
 def searchResultsView(request):

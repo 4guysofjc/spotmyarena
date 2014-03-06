@@ -2965,9 +2965,27 @@ a.button2,
 #style_picker a:hover {
 	text-decoration: underline;
 }
+
+/* Home page */
+.home_content_area {
+        width: 1160px;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        position: relative;
+        height: 900px;
+}
+.home_search_box_container {
+        width: 960px;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        position: relative;
+        height: 300px;
+}
 /* Search result page */
 .advertisement {
-        width: 900px;
+        width: 960px;
         margin: 0 auto;
         top: 0px;
         left: 0px;
