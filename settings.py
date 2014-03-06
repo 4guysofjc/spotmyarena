@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'djangoratings',
     'dajaxice',
     'dajax',
+    'spotmyarena.vendorData',
 )
 
 MIDDLEWARE_CLASSES = (
