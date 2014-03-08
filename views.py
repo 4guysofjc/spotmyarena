@@ -20,7 +20,8 @@ def clubProfile(request):
     return HttpResponse(html)
 
 def all_json_areas(request, sport):
-    current_sport = Sport.objects.get(sport_id=sport)
-    areas = Sports.objects.all().filter(sport_id=current_sport)
+    current_sport = Sport.objects.get(sport_name=sport)
+    areas = club.objects.all().filter(sport_id=current_sport)
     json_areas = serializers.serialize("json", areas)
     return HttpResponse(json_areas, mimetype="application/javascript")
+

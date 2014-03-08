@@ -6,6 +6,9 @@ class Sport(models.Model):
 	sport_id =models.CharField(primary_key=True,max_length=7)
         sport_name = models.CharField(max_length=30)
 	sport_description = models.CharField(max_length = 500)
+	
+	def __unicode__(self):
+            return self.sport_name
 
 class Club(models.Model):
 	club_id = models.CharField(primary_key=True,max_length=7)
@@ -24,6 +27,8 @@ class Club(models.Model):
 	club_email = models.EmailField()
 	club_pictures = models.URLField(max_length=100)
 	club_sport_id = models.ManyToManyField(Sport, through='SportClub')
+        def __unicode__(self):
+            return self.club_name
 
 class SportClub(models.Model):
 	club_id = models.ForeignKey(Club)
