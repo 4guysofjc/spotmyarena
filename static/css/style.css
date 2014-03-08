@@ -2975,13 +2975,53 @@ a.button2,
         position: relative;
         height: 900px;
 }
-.home_search_box_container {
+.home_Search_container {
         width: 960px;
         margin: 0 auto;
         top: 0px;
         left: 0px;
         position: relative;
         height: 300px;
+}
+.home_search_box_container {
+        width: 300px;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+	border: 1px solid;
+        position: relative;
+	height: 300;
+}
+.home_search_label {
+	width: 300px;
+        margin: 10px auto;
+        top: 0px;
+        left: 0px;
+	text-align: center;
+	font-size: 20px;
+        position: relative;
+}
+.home_sport_name {
+        margin: 10 auto;
+        top: 0px;
+        left: 0px;
+        position: relative;
+        height: 60px;
+	
+}
+.home_sport_area {
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        position: relative;
+        height: 60px;
+}
+.home_sport_date {   
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        position: relative;
+        height: 80px;
 }
 /* Search result page */
 .advertisement {

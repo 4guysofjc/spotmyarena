@@ -1,20 +1,74 @@
 {% extends "rawBase.html" %}
+{% load Sportstags %}
+<!-- index.html -->
 
 {% block scriptBlock %}
+    $(document).ready(
+                     function() {
+                         $("select#sport_name").change(function() {
+                             if ($(this).val() == 'Z') {
+                                 $("select#sport_area").html("<option>Select a Area</option>");
+                                 $("select#sport_area").attr('disabled', true);
+                             }
+                             else {
+                                 var url = "/sport/" + $(this).val() + "/all_json_areas";
+                                 var areas = $(this).val();
+                                 $.getJSON(url, function(areas) {
+                                     var options = '<option value="Z">Select a area</option>';
+                                     for (var i = 0; i < areas.length; i++) {
+                                        options += '<option value="' + areas[i].pk + '">' + areas[i].fields['club_area'] + '</option>';
+                                     }
+                                     $("select#sport_area").html(options);
+                                     $("select#sport_area option:first").attr('selected', 'selected');
+                                     $("select#sport_area").attr('disabled', false);
+                                 });
+                             }
+                         });
+
+
+                         $("select#sport_area").change(function(vent) {
+                             if ($(this).val() == -1) {
+                                 return;
+                             }
+                             myAwesomeFunctionToCallWhenAModelIsSelected();
+                         });
+                     });
+    }
+
 {% endblock %}
 
 {% block contentBlock %}
 <div class="home_content_area"> 
-	<div class="home_search_box_container"> 
+<div class="home_Search_container">
+	<div class="home_search_box_container left"> 
+	   <fieldset>
 		<form action="/search/" method="get">
-            <fieldset>
+		<div class="home_search_label">
+			<h3>Book your ticket here</h3>
+		</div>
+		<div class="home_sport_name">
+				<select name="sport_name" id="sport_name">
+					<option value="Z">Select a Sport</option>
+					{% for sport in sport_list %}
+						<option value="{{ sport.fields.sport_name }}">{{ sport.fields.sport_name }}</option>
+					{% endfor %}
+				</select>
+		</div>
+		<div class="home_sport_area">
+				<select name="sport_area" id="sport_area" disabled="true">
+					<option>Select a Area</option>
+	                        </select>
+		</div>
+		<div class="home_sport_date">
+				<input id="datefrom" name="book_date_from" value="" class="datepicker filter_date hasDatepicker" type="text">
+		</div>
                 <ol>
-                    {{ form.as_p }}
                     <li><input type="submit" value="Search" />
                 </ol>
-            </fieldset>
     		</form>
+            </fieldset>
 	</div>
+</div>
 		<!-- BEGIN .content-wrapper -->
 		<div class="content-wrapper clearfix">
 			
