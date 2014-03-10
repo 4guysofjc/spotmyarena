@@ -11,10 +11,10 @@
                                  $("select#sport_area").attr('disabled', true);
                              }
                              else {
-                                 var url = "/sport/" + $(this).val() + "/all_json_areas";
-                                 var sport = $(this).val();
+                                 var url ="/sport/" + $(this).val() + "/all_json_areas/";
+				 var sportId = $(this).val();
                                  $.getJSON(url, function(areas) {
-                                     var options = '<option value="Z">Select a area</option>';
+				     var options = '<option value="Z">Select a area</option>';
                                      for (var i = 0; i < areas.length; i++) {
                                         options += '<option value="' + areas[i].pk + '">' + areas[i].fields['club_area'] + '</option>';
                                      }
@@ -30,10 +30,9 @@
                              if ($(this).val() == -1) {
                                  return;
                              }
-                             myAwesomeFunctionToCallWhenAModelIsSelected();
+				alert("Hello");
                          });
                      });
-    }
 
 {% endblock %}
 
@@ -50,7 +49,7 @@
 				<select name="sport_name" id="sport_name">
 					<option value="Z">Select a Sport</option>
 					{% for sport in sport_list %}
-						<option value="{{ sport.fields.sport_name }}">{{ sport.fields.sport_name }}</option>
+						<option value="{{ sport.pk }}">{{ sport.fields.sport_name }}</option>
 					{% endfor %}
 				</select>
 		</div>
