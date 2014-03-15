@@ -4,19 +4,20 @@ from django.template import Template, Context
 from django.shortcuts import render
 from django.core import serializers
 from spotmyarena.vendorData.models import Sport,Club
-
+from spotmyarena.context_processors import context_rawBase
+from django.template import RequestContext
 
 def indexView(request):
     sport_list = serializers.serialize('python', Sport.objects.all(), fields=('sport_name','sport_id'))
-    return render(request, "index.html", {'phoneNo' : '9876543210', 'sport_list': sport_list, })
+    return render(request, "index.html", { 'sport_list': sport_list, }, context_instance=RequestContext(request, processors=[context_rawBase]))
     return HttpResponse(html)
 
 def searchResultsView(request):
-    return render(request, "searchResults.html", {'phoneNo' : '9876543210'})
+    return render(request, "searchResults.html", context_instance=RequestContext(request, processors=[context_rawBase]))
     return HttpResponse(html)
 
 def clubProfile(request):
-    return render(request, "clubProfile.html", {'phoneNo' : '9876543210'})
+    return render(request, "clubProfile.html", context_instance=RequestContext(request, processors=[context_rawBase]))
     return HttpResponse(html)
 
 def all_json_areas(request, sportId):

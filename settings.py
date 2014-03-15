@@ -66,6 +66,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 "django.core.context_processors.tz",
 "django.core.context_processors.request",
 "django.contrib.messages.context_processors.messages",
+"spotmyarena.context_processors.context_rawBase",
 )
 
 TEMPLATE_LOADERS = (
