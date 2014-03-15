@@ -15,8 +15,12 @@
 				 var sportId = $(this).val();
                                  $.getJSON(url, function(areas) {
 				     var options = '<option value="Z">Select a area</option>';
+				     var areas_array = [];
                                      for (var i = 0; i < areas.length; i++) {
-                                        options += '<option value="' + areas[i].pk + '">' + areas[i].fields['club_area'] + '</option>';
+					if (areas_array.indexOf(areas[i].fields['club_area']) == -1 ) {
+						areas_array.push(areas[i].fields['club_area']); 
+                                                options += '<option value="' + areas[i].fields['club_area'] + '">' + areas[i].fields['club_area'] + '</option>';
+					}
                                      }
                                      $("select#sport_area").html(options);
                                      $("select#sport_area option:first").attr('selected', 'selected');
@@ -59,7 +63,7 @@
 	                        </select>
 		</div>
 		<div class="home_sport_date">
-				<input id="date" name="book_date_from" value="{{ todaysDate }}" class="datepicker filter_date hasDatepicker" type="text"></input>
+				<input id="date" name="sport_date" value="{{ todaysDate }}" class="datepicker filter_date hasDatepicker" type="text"></input>
 		</div>
                 <ol>
                     <li><input type="submit" value="Search" />

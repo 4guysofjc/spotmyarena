@@ -57,10 +57,11 @@ $( document ).ready(function() {
 	</div>
 </div>
 <div class="search_results_area">
+    {% for club in club_list %}
 	<li class="search_results_container">
 		<div class="search_data_left">
-			<h3 class="left f18 bold"><a href="http://www.spotmyarena.com/gurukul" class="remove_underline hover_gold_color" title="Gurukul, ORR">GURUKUL</a></h3><BR /><BR />
-			<div class="left search_address f12">#511, Durga Coral Apt., Kadubeesnahalli</div>
+			<h3 class="left f18 bold"><a href="http://www.spotmyarena.com/gurukul" class="remove_underline hover_gold_color" title="Gurukul, ORR">{{ club.fields.club_name}}</a></h3><BR /><BR />
+			<div class="left search_address f12">{{ club.fields.club_address}} {{ club.fields.club_area }} {{ club.fields.club_city }} {{ club.fields.club_pincode }} </div>
 			<BR />
 			<div class="left search_sports_available f14">Sports: </div>
 			<BR />
@@ -75,47 +76,10 @@ $( document ).ready(function() {
 			<div class="search_no_of_votes right">based on 22 votes</div>
 			<BR />
 			<BR />
-			<div class="search_choose_slots button1 right" toggle="first">Choose Slots</div>
+			<div class="search_choose_slots button1 right" toggle="{{forloop.counter}}">Choose Slots</div>
 		</div>
 	</li>
-	<div class="selecting_slot_area" id="first">
-	
-	</div>
-        <li class="search_results_container">
-                <div class="search_data_left">
-                        <h3 class="left f18 bold"><a href="http://www.spotmyarena.com/gurukul" class="remove_underline hover_gold_color" title="Gurukul, ORR">GURUKUL</a></h3><BR /><BR />
-                        <div class="left search_address f12">#511, Durga Coral Apt., Kadubeesnahalli</div>
-                        <BR />
-                        <div class="left search_sports_available f14">Sports: </div>
-                        <BR />
-                        <div class="left search_sport_cost f14">Cost: </div>
-                        <BR />
-                        <div class="left search_sport_hours f14">Hours: </div>
-                </div>
-                <div class="search_data_right">
-                        <div class="search_rating right">3.6</div>
-                        <BR />
-                        <BR />
-                        <div class="search_no_of_votes right">based on 22 votes</div>
-                        <BR />
-                        <BR />
-                        <div class="search_choose_slots button1 right" toggle="second">Choose Slots</div>
-                </div>
-        </li>
-        <div class="selecting_slot_area" id="second">
-        </div>
-</div>
-<div class="page_navigation_bar">
-	<div class="page_navigation_bar_left">Page 1 of 3</div>
-	<div class="page_navigation_bar_right">
-			<div class="next"><a class="rem_hyperlink" tiltle="go to next page" href="">NEXT</a></div>
-			<div class="dot3"><a class="rem_hyperlink" tiltle="show next 5 pages" href="">. . .</a></div>
-			<div class="active"><a class="rem_hyperlink" tiltle="go to page 5" href="">5</a></div>
-			<div class="active"><a class="rem_hyperlink" tiltle="go to page 4" href="">4</a></div>
-			<div class="active"><a class="rem_hyperlink" tiltle="go to page 3" href="">3</a></div>
-			<div class="active"><a class="rem_hyperlink" tiltle="go to page 2" href="">2</a></div>
-			<div class="current">1</div>
-			<div class="prev"><a class="rem_hyperlink" tiltle="go to previous page" href="">PREV</a></div>
-	</div>
+	<div class="selecting_slot_area" id="{{forloop.counter}}"></div>
+    {% endfor %}
 </div>
 {% endblock %}
