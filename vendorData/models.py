@@ -1,4 +1,5 @@
 from django.db import models
+from ratings.models import Ratings
 
 # Create your models here.
 
@@ -27,6 +28,7 @@ class Club(models.Model):
 	club_email = models.EmailField()
 	club_pictures = models.URLField(max_length=100)
 	club_sport_id = models.ManyToManyField(Sport, through='SportClub')
+	club_rating = Ratings()
         def __unicode__(self):
             return self.club_name
 
@@ -35,7 +37,8 @@ class SportClub(models.Model):
 	sport_id = models.ForeignKey(Sport)
         sports_type = models.CharField(max_length=7)
         arena_type = models.CharField(max_length=20)
-        open_hours = models.IntegerField()
+        open_hours_am = models.PositiveBigIntegerField()
+        open_hours_pm = models.PositiveBigIntegerField()
 	coaching_available = models.BooleanField()
 	membership_available = models.BooleanField()
 
@@ -57,8 +60,11 @@ class Slot(models.Model):
 	slot_club_id = models.ForeignKey(Club)
 	slot_sport_id = models.ForeignKey(Sport)
 	slot_date = models.DateField()
+	slot_cost = models.PositiveIntegerField()
 	slot_duration = models.PositiveSmallIntegerField()
-	slot_availability = models.PositiveBigIntegerField()
+	slot_availability_am = models.PositiveBigIntegerField()
+	slot_availability_pm = models.PositiveBigIntegerField()
+
 
 class Event(models.Model):
 	event_club_id = models.ForeignKey(Club)
