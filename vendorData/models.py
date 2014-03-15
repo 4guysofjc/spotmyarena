@@ -58,7 +58,7 @@ class Slot(models.Model):
 	slot_sport_id = models.ForeignKey(Sport)
 	slot_date = models.DateField()
 	slot_duration = models.PositiveSmallIntegerField()
-	slot_availability = models.IntegerField()
+	slot_availability = models.PositiveBigIntegerField()
 
 class Event(models.Model):
 	event_club_id = models.ForeignKey(Club)
