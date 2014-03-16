@@ -14,7 +14,7 @@ class Sport(models.Model):
 class Club(models.Model):
 	club_id = models.CharField(primary_key=True,max_length=7)
 	club_name = models.CharField(max_length=50)
-	club_address = models.CharField(max_length=50)
+	club_address = models.CharField(max_length=100)
 	club_city = models.CharField(max_length=30)
 	club_area = models.CharField(max_length=30)
 	club_state = models.CharField(max_length=30)
@@ -37,8 +37,11 @@ class SportClub(models.Model):
 	sport_id = models.ForeignKey(Sport)
         sports_type = models.CharField(max_length=7)
         arena_type = models.CharField(max_length=20)
+	cost_weekdays = models.PositiveIntegerField()
+	cost_weekends = models.PositiveIntegerField()
         open_hours_am = models.PositiveBigIntegerField()
         open_hours_pm = models.PositiveBigIntegerField()
+	slot_duration = models.PositiveSmallIntegerField()
 	coaching_available = models.BooleanField()
 	membership_available = models.BooleanField()
 
@@ -46,25 +49,25 @@ class Coaching(models.Model):
 	coaching_club_id = models.ForeignKey(Club)
 	coaching_sport_id = models.ForeignKey(Sport)
 	coaching_fee = models.IntegerField()
-        coaching_time = models.IntegerField()
+        coaching_start_time = models.TimeField()
+	coaching_end_time = models.TimeField() 
         coaching_start_date = models.DateField()
         coaching_end_date = models.DateField()
+	coaching_total_seats = models.PositiveSmallIntegerField()
+	coaching_filled_seats = models.PositiveSmallIntegerField()
 
 class Membership(models.Model):
 	membership_club_id = models.ForeignKey(Club)
 	membership_sport_id = models.ForeignKey(Sport)
 	membership_fee = models.IntegerField()
-	membership_duration_in_months = models.IntegerField()
+	membership_duration_in_days = models.PositiveSmallIntegerField()
 
-class Slot(models.Model):
-	slot_club_id = models.ForeignKey(Club)
-	slot_sport_id = models.ForeignKey(Sport)
-	slot_date = models.DateField()
-	slot_cost = models.PositiveIntegerField()
-	slot_duration = models.PositiveSmallIntegerField()
-	slot_availability_am = models.PositiveBigIntegerField()
-	slot_availability_pm = models.PositiveBigIntegerField()
-
+class Availability(models.Model):
+	availability_date = models.DateField(primary_key=True)
+	availability_club_id = models.ForeignKey(Club)
+	availability_sport_id = models.ForeignKey(Sport)
+	availability_am = models.PositiveBigIntegerField()
+	availability_pm = models.PositiveBigIntegerField()
 
 class Event(models.Model):
 	event_club_id = models.ForeignKey(Club)
@@ -82,9 +85,10 @@ class Event(models.Model):
 	event_mixed_doubles = models.BooleanField()
 
 class Booking(models.Model):
-	booking_id = models.CharField(max_length = 7)
+	booking_id = models.CharField(primary_key=True,max_length = 7)
 	booking_club_id = models.ForeignKey(Club)
 	booking_sports_id = models.ForeignKey(Sport)
+	booked_slot = models.PositiveBigIntegerField()
 	booking_date = models.DateField()
 	booking_time = models.TimeField()
 	

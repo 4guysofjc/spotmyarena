@@ -20,7 +20,7 @@ def searchResultsView(request):
 	query_dict = parse_qs(request.GET.urlencode())
 	selected_sport_id = query_dict['sport_name'][0]
 	selected_area = query_dict['sport_area'][0]
-	selected_date = query_dict['sport_date']
+	selected_date = query_dict['sport_date'][0]
 	club_list = serializers.serialize('python', 
 		Club.objects.all().filter(club_area = selected_area, club_sport_id = selected_sport_id), 
 		fields=('club_name','club_address','club_area','club_city','club_pincode'))
