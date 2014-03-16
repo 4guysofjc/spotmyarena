@@ -19,6 +19,7 @@ urlpatterns = patterns('',
     url(r'^club/$', views.clubProfile),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^sport/(?P<sportId>[-\w]+)/all_json_areas/$', views.all_json_areas),
+    url(r'^availability/(?P<selected_club_id>[-\w]+)/get_json_availability/$', views.get_json_availability),
 )
 
 if settings.DEBUG:

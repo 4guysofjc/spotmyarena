@@ -10,6 +10,6 @@ def context_rawBase(request):
         'ip_address': request.META['REMOTE_ADDR'],
 	'phoneNo' : '9876543210',
 	'emailId' : 'spotmyarena@gmail.com',
-	'todaysDate' : DateFormat(datetime.now()).format('d M Y'),
+	'todaysDate' : DateFormat(datetime.now()).format('Y-m-d'),
 	
     }

@@ -28,6 +28,8 @@ class Club(models.Model):
 	club_email = models.EmailField()
 	club_pictures = models.URLField(max_length=100)
 	club_sport_id = models.ManyToManyField(Sport, through='SportClub')
+        club_open_hours_am = models.PositiveBigIntegerField()
+        club_open_hours_pm = models.PositiveBigIntegerField()
 	club_rating = Ratings()
         def __unicode__(self):
             return self.club_name
@@ -39,8 +41,6 @@ class SportClub(models.Model):
         arena_type = models.CharField(max_length=20)
 	cost_weekdays = models.PositiveIntegerField()
 	cost_weekends = models.PositiveIntegerField()
-        open_hours_am = models.PositiveBigIntegerField()
-        open_hours_pm = models.PositiveBigIntegerField()
 	slot_duration = models.PositiveSmallIntegerField()
 	coaching_available = models.BooleanField()
 	membership_available = models.BooleanField()

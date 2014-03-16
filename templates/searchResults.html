@@ -8,6 +8,11 @@ $( document ).ready(function() {
 		id = $(this).attr('toggle');
 		$('.selecting_slot_area').not('#' + id).hide("slow");
 		$('#' + id).toggle("slow");
+		var selected_club_id = $(this).attr('clubId');
+		var url = "/availability/" + selected_club_id + "/get_json_availability/";
+		$.getJSON(url, function(availability) {
+
+		});
 	});
 
 });
@@ -76,10 +81,19 @@ $( document ).ready(function() {
 			<div class="search_no_of_votes right">based on 22 votes</div>
 			<BR />
 			<BR />
-			<div class="search_choose_slots button1 right" toggle="{{forloop.counter}}">Choose Slots</div>
+			<div class="search_choose_slots button1 right" toggle="{{forloop.counter}}" clubId="{{club.pk}}">Choose Slots</div>
 		</div>
 	</li>
-	<div class="selecting_slot_area" id="{{forloop.counter}}"></div>
+	<div class="selecting_slot_area" id="{{forloop.counter}}">
+		<img src="{{ STATIC_URL }}images/red_ball.png">
+		<img src="{{ STATIC_URL }}images/red_ball.png">
+		<img src="{{ STATIC_URL }}images/red_ball.png">
+		<img src="{{ STATIC_URL }}images/red_ball.png">
+		<img src="{{ STATIC_URL }}images/red_ball.png">
+		<img src="{{ STATIC_URL }}images/red_ball.png">
+		<img src="{{ STATIC_URL }}images/red_ball.png">
+		<img src="{{ STATIC_URL }}images/red_ball.png">
+	</div>
     {% endfor %}
 </div>
 {% endblock %}
