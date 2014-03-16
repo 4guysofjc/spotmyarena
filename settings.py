@@ -49,12 +49,14 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -126,3 +128,16 @@ STATICFILES_FINDERS = (
 "dajaxice.finders.DajaxiceFinder",
 )
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+        'TIMEOUT': 1000,
+        'OPTIONS': {
+            'MAX_ENTRIES': 10000
+        }
+    }
+}
+
+
+CACHE_MIDDLEWARE_SECONDS = 1000

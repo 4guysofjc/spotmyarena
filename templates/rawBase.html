@@ -1,4 +1,6 @@
 {% load dajaxice_templatetags %}
+{% load cache %}
+{% cache 500 header %}
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html dir="ltr" lang="en-US" class="ie6"> <![endif]-->
 <!--[if IE 7]>    <html dir="ltr" lang="en-US" class="ie7"> <![endif]-->
@@ -149,8 +151,9 @@
 			</div>
 		
 		</div>
+{% endcache %}
 	{% block contentBlock %} Nothing{% endblock %}
-		
+{% cache 500 sidebar %}		
 		<!-- BEGIN #footer -->
 		<div id="footer">
 			
@@ -242,6 +245,7 @@
 	<script type="text/javascript" src="{{ STATIC_URL }}js/gmap.js"></script>
 	<script type="text/javascript" src="{{ STATIC_URL }}js/scripts.js"></script>
 	
+{% endcache %}
 <!-- END body -->
 </body>
 </html

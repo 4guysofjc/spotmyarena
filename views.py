@@ -8,14 +8,16 @@ from spotmyarena.context_processors import context_rawBase
 from django.template import RequestContext
 from urlparse import urlparse, parse_qs
 from django.shortcuts import render_to_response
+from django.views.decorators.cache import cache_page
 
+@cache_page(60 * 15)
 def indexView(request):
 	sport_list = serializers.serialize('python', Sport.objects.all(), fields=('sport_name','sport_id'))
 	return render(request, "index.html", { 'sport_list': sport_list, }, 
 		context_instance=RequestContext(request, processors=[context_rawBase]))
 	return HttpResponse(html)
 		
-
+@cache_page(60 * 5)
 def searchResultsView(request):
 	query_dict = parse_qs(request.GET.urlencode())
 	selected_sport_id = query_dict['sport_name'][0]
@@ -32,6 +34,7 @@ def searchResultsView(request):
 		context_instance=RequestContext(request, processors=[context_rawBase]))
     	return HttpResponse(html)
 	    
+@cache_page(60 * 15)
 def clubProfile(request):
 	return render(request, "clubProfile.html", context_instance=RequestContext(request, processors=[context_rawBase]))
 	return HttpResponse(html)
