@@ -1,5 +1,5 @@
 from django.db import models
-from ratings.models import Ratings
+from djangoratings.fields import RatingField
 
 # Create your models here.
 
@@ -30,7 +30,8 @@ class Club(models.Model):
 	club_sport_id = models.ManyToManyField(Sport, through='SportClub')
         club_open_hours_am = models.PositiveBigIntegerField()
         club_open_hours_pm = models.PositiveBigIntegerField()
-	club_rating = Ratings()
+	club_rating = RatingField(range=5)
+
         def __unicode__(self):
             return self.club_name
 
